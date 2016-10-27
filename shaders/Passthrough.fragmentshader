@@ -1,0 +1,21 @@
+#version 330 core
+
+// Input data for the coordinates of the fragment
+in vec2 UV;
+
+// Output data for the color
+out vec3 color;
+
+uniform sampler2D UpdatedTexture;
+uniform sampler2D CamTexture;
+uniform sampler2D BackgroundTexture;
+
+void main()
+{
+	if (texture(UpdatedTexture, UV).r == 0.0) { // if the pixel is not a part of the foreground
+		color = texture(BackgroundTexture, UV).rgb; // show the background
+	} else {
+		color = texture(CamTexture, UV).rgb; //show the foreground = the camera capture
+	}
+	//color = texture(UpdatedTexture, UV).rgb; // shows the modified texture
+}
