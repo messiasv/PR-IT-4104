@@ -8,14 +8,21 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-* OpenGL
+* GL
+* glut
+* GLEW
+* GLFW
+* SOIL
 * OpenCV
 
 ### Installing
 
-* Installing OpenCV
+* Installing OpenGL libraries
+```
+sudo apt install libglew1.13 libglew-13 freeglut3 freeglut3-dev libglfw3 libglfw3-dev libsoil1 libsoil-dev libgl1-mesa-dev libglu1-mesa-dev
+```
+
+* Installing OpenCV library
 ```
 sudo apt install build-essential make cmake git libgtk2.0-dev pkg-config python python-dev python-numpy libavcodec-dev libavformat-dev libswscale-dev libjpeg-dev libpng-dev libtiff-dev
 cd ~/Downloads
@@ -31,12 +38,12 @@ sudo make -j4 install
 sudo ldconfig
 ```
 
-## Deployment
+## Running
 
-```
-make
-./seg_image
-```
+* To build the project : `make`
+* To run the project : `./seg_image`
+* To clean the project folder : `make clean`
+* To clean the project folder and remove the executable : `make mrproper`
 
 ## Authors
 
