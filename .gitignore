@@ -320,3 +320,6 @@ __pycache__/
 
 ### VisualStudio Patch ###
 build/
+
+### Executable ###
+seg_image
